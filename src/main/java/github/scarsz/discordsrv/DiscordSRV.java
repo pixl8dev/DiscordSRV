@@ -1885,7 +1885,13 @@ public class DiscordSRV extends JavaPlugin {
                     (channel, message, PlayerUtil.getOnlinePlayers()));
             message = preBroadcastEvent.getMessage();
             channel = preBroadcastEvent.getChannel();
-            MessageUtil.sendMessage(preBroadcastEvent.getRecipients(), message);
+            
+            // Filter players based on their toggle state
+            Set<Player> recipients = preBroadcastEvent.getRecipients().stream()
+                .filter(player -> getConfig().getBoolean("Players." + player.getUniqueId() + ".DiscordChatEnabled", true))
+                .collect(java.util.stream.Collectors.toSet());
+                
+            MessageUtil.sendMessage(recipients, message);
             PlayerUtil.notifyPlayersOfMentions(null, MessageUtil.toLegacy(message));
         } else {
             chatHook.broadcastMessageToChannel(channel, message);

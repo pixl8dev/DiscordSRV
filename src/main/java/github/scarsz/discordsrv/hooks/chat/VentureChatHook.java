@@ -248,6 +248,7 @@ public class VentureChatHook implements ChatHook {
             List<MineverseChatPlayer> playersToNotify = MineverseChat.onlinePlayers.stream()
                     .filter(p -> p.getListening().contains(chatChannel.getName()))
                     .filter(p -> !chatChannel.hasPermission() || p.getPlayer().hasPermission(chatChannel.getPermission()))
+                    .filter(p -> DiscordSRV.getPlugin().getConfig().getBoolean("Players." + p.getPlayer().getUniqueId() + ".DiscordChatEnabled", true))
                     .collect(Collectors.toList());
             for (MineverseChatPlayer player : playersToNotify) {
                 String playerMessage = (player.hasFilter() && chatChannel.isFiltered()) ? Format.FilterChat(message) : message;

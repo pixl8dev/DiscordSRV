@@ -446,3 +446,7 @@ UnlinkCommandSuccess: "&bYour Minecraft account is no longer associated with %na
 MinecraftNoLinkedAccount: "&cYour Minecraft account isn't associated with a Discord account."
 LinkingError: "&cCurrently unable to link accounts due to an internal error. Contact your server administration team."
 MinecraftNobodyFound: "&cNobody found with Discord ID/Discord name/Minecraft name/Minecraft UUID matching \"%target%\" to look up."
+
+# Discord chat toggle messages
+DiscordChatEnabled: "You will now receive Discord chat messages"
+DiscordChatDisabled: "You will no longer receive Discord chat messages"
