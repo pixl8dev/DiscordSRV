@@ -7,7 +7,7 @@
 [![](https://img.shields.io/github/contributors/DiscordSRV/DiscordSRV.svg)](https://github.com/DiscordSRV/DiscordSRV/graphs/contributors "GitHub contributors")
 [![](https://img.shields.io/github/license/DiscordSRV/DiscordSRV.svg)](https://github.com/DiscordSRV/DiscordSRV/blob/master/LICENSE "License")
 
-A Minecraft to Discord and back link plugin
+A Minecraft to Discord and back link plugin for block game
 
 [![](https://bstats.org/signatures/bukkit/DiscordSRV.svg)](https://bstats.org/plugin/bukkit/DiscordSRV/387 "DiscordSRV on bStats")
 
